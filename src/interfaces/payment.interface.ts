@@ -1,16 +1,16 @@
 interface IInvoices {
   invoice: {
     totalInovice: number;
-    totalInvoiceAmount: number;
+    batchAmount: number;
     datesent: string;
   };
   invoiceData: [
     {
-      invocieno: string;
-      amount: number;
-      invoiceYear: string;
-      pid: string;
-      property: {
+      invocieNo: string;
+      billAmount: number;
+      fiscalYear: string;
+      propertyId: string;
+      address: {
         lga: string;
         street: string;
         houseNo: string;
