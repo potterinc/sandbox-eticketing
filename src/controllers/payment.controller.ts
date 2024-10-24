@@ -24,7 +24,7 @@ class InvoiceProcessingController {
             collectionyear: invoice.fiscalYear,
             paymentdate: new Date().toISOString
           })
-            .then((response: any) => console.log(response))
+            .then((response: any) => console.log(response.message))
             .catch((e: unknown | any) => console.log(e.message))
         }, 60000)
       })
