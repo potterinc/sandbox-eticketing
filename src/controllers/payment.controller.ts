@@ -18,7 +18,7 @@ class InvoiceProcessingController {
         const amountDue = invoices.billAmount;
         setTimeout(async () => {
           await axios.patch(`https://sms-api.emumapp.com/api/v1/invoice/${invoices.invoiceNo}`, {
-            collectionid: invoices.invocieNo,
+            collectionid: invoices.invoiceNo,
             amount: crypto.randomInt(1000, amountDue),
             paymentref: crypto.randomBytes(16).toString('hex'),
             collectionyear: new Date().getFullYear(),

@@ -6,7 +6,7 @@ interface IInvoices {
   };
   invoiceData: [
     {
-      invocieNo: string;
+      invoiceNo: string;
       billAmount: number;
       fiscalYear: string;
       propertyId: string;
