@@ -15,10 +15,10 @@ class InvoiceProcessingController {
     
     try {
       invoices.forEach(invoice => {
-        const amountDue = invoices.billAmount;
+        const amountDue = invoice.billAmount;
         setTimeout(async () => {
-          await axios.patch(`https://sms-api.emumapp.com/api/v1/invoice/${invoices.invoiceNo}`, {
-            collectionid: invoices.invoiceNo,
+          await axios.patch(`https://sms-api.emumapp.com/api/v1/invoice/${invoice.invoiceNo}`, {
+            collectionid: invoice.invoiceNo,
             amount: crypto.randomInt(1000, amountDue),
             paymentref: crypto.randomBytes(16).toString('hex'),
             collectionyear: new Date().getFullYear(),
