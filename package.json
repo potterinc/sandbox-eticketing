@@ -1,0 +1,35 @@
+{
+  "name": "reverse-casino-integration",
+  "version": "1.0.0",
+  "description": "Reverse casino integration for Vyking casino",
+  "main": "server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "start:dev": "nodemon src/server.ts",
+    "build": "tsc -p ."
+  },
+  "keywords": [
+    "casino",
+    "api"
+  ],
+  "author": "maliroso-digital",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/mysql": "^2.15.26",
+    "@types/node": "^22.1.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
