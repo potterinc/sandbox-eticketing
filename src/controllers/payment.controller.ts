@@ -12,7 +12,7 @@ class InvoiceProcessingController {
   processInvoiceRequest(req: Request, res: Response) {
     const tickets: IInvoices = req.body;
     const invoices = tickets.invoiceData;
-    const amountDue = invoice.billAmount
+    const amountDue = invoices.billAmount
 
     try {
       invoices.forEach(invoice => {
