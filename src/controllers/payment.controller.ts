@@ -12,10 +12,10 @@ class InvoiceProcessingController {
   processInvoiceRequest(req: Request, res: Response) {
     const tickets: IInvoices = req.body;
     const invoices = tickets.invoiceData;
-    const amountDue = invoices.billAmount
-
+    
     try {
       invoices.forEach(invoice => {
+        const amountDue = invoices.billAmount;
         setTimeout(async () => {
           await axios.patch(`https://sms-api.emumapp.com/api/v1/invoice/${invoices.invoiceNo}`, {
             collectionid: invoices.invocieNo,
