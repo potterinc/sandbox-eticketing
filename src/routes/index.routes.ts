@@ -1,5 +1,5 @@
 import { Request, Response, Router } from "express";
-import processRoute from "./game.route";
+import processRoute from "./payment.route";
 
 const router: Router = Router();
 

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import IInvoices from "../interfaces/game.interface";
+import IInvoices from "../interfaces/payment.interface";
 import crypto from 'crypto';
 import axios from "axios";
 
