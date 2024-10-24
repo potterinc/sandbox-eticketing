@@ -22,7 +22,7 @@ class InvoiceProcessingController {
             amount: crypto.randomInt(1000, amountDue),
             paymentref: crypto.randomBytes(16).toString('hex'),
             collectionyear: invoice.fiscalYear,
-            paymentdate: new Date().toISOString
+            paymentdate: new Date()
           })
             .then((response: any) => console.log(response.message))
             .catch((e: unknown | any) => console.log(e.message))

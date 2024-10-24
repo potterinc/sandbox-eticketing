@@ -10,12 +10,6 @@ interface IInvoices {
       billAmount: number;
       fiscalYear: string;
       propertyId: string;
-      address: {
-        lga: string;
-        street: string;
-        houseNo: string;
-        zone: string;
-      }
     }
   ]
 }
