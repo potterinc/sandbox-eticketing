@@ -17,11 +17,11 @@ class InvoiceProcessingController {
       invoices.forEach(invoice => {
         const amountDue = invoice.billAmount;
         setTimeout(async () => {
-          await axios.patch(`https://sms-api.emumapp.com/api/v1/invoice/${invoice.invoiceNo}`, {
+          await axios.patch(`https://sms-api.enumapp.com/api/v1/invoice/${invoice.invoiceNo}`, {
             collectionid: invoice.invoiceNo,
             amount: crypto.randomInt(1000, amountDue),
             paymentref: crypto.randomBytes(16).toString('hex'),
-            collectionyear: new Date().getFullYear(),
+            collectionyear: invoice.fiscalYear,
             paymentdate: new Date().toISOString
           })
             .then((response: any) => console.log(response))
