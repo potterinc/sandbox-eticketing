@@ -24,7 +24,7 @@ class InvoiceProcessingController {
             collectionyear: invoice.fiscalYear,
             paymentdate: new Date()
           })
-            .then((response: any) => console.log(response.message))
+            .then((response: any) => console.log(response))
             .catch((e: unknown | any) => console.log(e.message))
         }, 60000)
       })
@@ -35,7 +35,7 @@ class InvoiceProcessingController {
         metadata: {
           id: crypto.randomUUID(),
           total_invoice_received: invoices.length,
-          date_received: Date.now().toString(),
+          date_received: new Date(),
         }
       });
     }
@@ -46,7 +46,7 @@ class InvoiceProcessingController {
         metadata: {
           id: crypto.randomUUID(),
           total_invoice_received: invoices.length,
-          date_received: Date.now().toString(),
+          date_received: new Date(),
         }
       })
     }
